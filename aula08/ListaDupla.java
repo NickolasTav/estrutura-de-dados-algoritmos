@@ -53,6 +53,12 @@ public class ListaDupla<T> {
         novoNo.setproximoNo(atual);
         novoNo.setAnteriorNo(anterior);
 
+        if(anterior != null){
+            anterior.getproximoNo();
+        }else{
+            primeiroNo = novoNo;
+        }
+
         anterior.setproximoNo(novoNo);
         atual.setAnteriorNo(novoNo);
 
